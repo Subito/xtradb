@@ -16,6 +16,12 @@
     name: MySQL-python
     state: present
 
+- name: Enable and start mysql
+  service:
+    name: mysql
+    enabled: yes
+    state: started
+
 - name: Change root Password
   mysql_user:
     name: root
