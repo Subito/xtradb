@@ -25,13 +25,9 @@
   template:
     src: root-my.cnf.j2
     dest: /root/.my.cnf
-  tags:
-    - conf
 
 - name: Set secure_auth=0
   copy:
     dest: /etc/my.cnf.d/secure_auth.cnf
     content: "[mysqld]\nsecure_auth=0\n"
-  tags:
-    - conf
   notify: restart mysql
