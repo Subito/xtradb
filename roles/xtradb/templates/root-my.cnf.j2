@@ -1,0 +1,4 @@
+# {{ ansible_managed }}
+[client]
+user=root
+password={{ lookup('password', playbook_dir + '/root_pw', length=16) }}

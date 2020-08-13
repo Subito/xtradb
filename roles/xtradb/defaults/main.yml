@@ -1,0 +1,4 @@
+---
+mysql_version: 5.6.47
+# takes major.minor.patch and converts to majorminor
+mysql_pkg_version: "{{ mysql_version | regex_replace('(\\d+)\\.(\\d+)\\.(\\d+)', '\\1\\2') }}"
